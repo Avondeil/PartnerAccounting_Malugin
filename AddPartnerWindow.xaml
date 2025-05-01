@@ -1,0 +1,78 @@
+﻿<Window x:Class="MasterPol.AddPartnerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MasterPol"
+        mc:Ignorable="d"
+        FontSize="16"
+        FontFamily="Segoe UI"
+        Title="Добавление партнера" Width="800" Height="750" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Image Width="100" Height="100" Source="/Мастер пол.png" HorizontalAlignment="Left" Margin="20"/>
+            <TextBlock Text="Добавление партнера" HorizontalAlignment="Center" FontSize="30" VerticalAlignment="Center" Margin="20"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Наименование организации:" VerticalAlignment="Center" Margin="5,0,10,0" Grid.Row="0"/>
+            <TextBox x:Name="NamePartnerTextBox" Margin="10" VerticalAlignment="Center" Height="35" Grid.Row="0" Grid.Column="1" Padding="5"/>
+
+            <TextBlock Text="Тип партнера:" VerticalAlignment="Center" Margin="5,0,10,0" Grid.Row="1" />
+            <ComboBox x:Name="PartnerTypeComboBox" Margin="10" VerticalAlignment="Center" Height="35" Grid.Row="1" Grid.Column="1" Padding="5" SelectedIndex="0">
+                <ComboBoxItem Content="ООО"/>
+                <ComboBoxItem Content="ЗАО"/>
+                <ComboBoxItem Content="ПАО"/>
+                <ComboBoxItem Content="ОАО"/>
+            </ComboBox>
+
+
+            <TextBlock Text="ФИО директора:" VerticalAlignment="Center" Margin="5,0,10,0" Grid.Row="2" />
+            <TextBox x:Name="DirectorNameTextBox" Margin="10" VerticalAlignment="Center" Height="35" Grid.Row="2" Grid.Column="1" Padding="5"/>
+
+            <TextBlock Text="Телефон:" VerticalAlignment="Center" Margin="5,0,10,0" Grid.Row="3" />
+            <TextBox x:Name="PhoneNumberTextBox" Margin="10" VerticalAlignment="Center" Height="35" Grid.Row="3" Grid.Column="1" Padding="5" PreviewTextInput="PhoneNumber_PreviewTextInput"/>
+
+            <TextBlock Text="Электронная почта:" VerticalAlignment="Center" Margin="5,0,10,0" Grid.Row="4" />
+            <TextBox x:Name="EmailPartnerTextBox" Margin="10" VerticalAlignment="Center" Height="35" Grid.Row="4" Grid.Column="1" Padding="5"/>
+
+            <TextBlock Text="Адрес:" VerticalAlignment="Center" Margin="5,0,10,0" Grid.Row="5" />
+            <TextBox x:Name="AddressPartnerTextBox" Margin="10" VerticalAlignment="Center" Height="35" Grid.Row="5" Grid.Column="1" Padding="5"/>
+
+            <TextBlock Text="Рейтинг:" VerticalAlignment="Center" Margin="5,0,10,0" Grid.Row="6"/>
+            <TextBox x:Name="RatingTextBox" Margin="10" VerticalAlignment="Center" Height="35" Grid.Row="6" Grid.Column="1" Padding="5" PreviewTextInput="DigitalTextBox_PreviewTextInput" MaxLength="2"/>
+
+            <TextBlock Text="ИНН:" VerticalAlignment="Center" Margin="5,0,10,0" Grid.Row="7" />
+            <TextBox x:Name="TinTextBox" Margin="10" VerticalAlignment="Center" Height="35" Grid.Row="7" Grid.Column="1" Padding="5" PreviewTextInput="DigitalTextBox_PreviewTextInput"/>
+
+            <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Добавить" Width="120" Height="40" FontWeight="Bold" Margin="5" Background="#67BA80" Click="AddButton_Click"/>
+                <Button Content="Отмена" Width="120" Height="40" IsCancel="True" FontWeight="Bold" Margin="5" Background="#67BA80"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
