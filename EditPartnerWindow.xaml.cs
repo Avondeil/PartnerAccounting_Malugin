@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -80,6 +80,10 @@ namespace MasterPol
         {
             try
             {
+                MessageBoxResult message = MessageBox.Show("Вы уверены что хотите изменить данные партнера?", "Редактирование", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                if (message != MessageBoxResult.Yes)
+                    return;
+
                 if (!ValidateInput())
                     return;
 
