@@ -69,8 +69,8 @@
             <TextBox x:Name="TinTextBox" Margin="10" VerticalAlignment="Center" Height="35" Grid.Row="7" Grid.Column="1" Padding="5" PreviewTextInput="DigitalTextBox_PreviewTextInput"/>
 
             <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Сохранить" Width="120" Height="40" FontWeight="Bold" Margin="5" Background="#67BA80" Click="SaveButton_Click"/>
-                <Button Content="Отмена" Width="120" Height="40" IsCancel="True" FontWeight="Bold" Margin="5" Background="#67BA80"/>
+                <Button Style="{StaticResource FlatGreenButton}" Content="Сохранить" Width="120" Height="40" FontWeight="Bold" Margin="5" Click="SaveButton_Click"/>
+                <Button Style="{StaticResource FlatGreenButton}" Content="Отмена" Width="120" Height="40" IsCancel="True" FontWeight="Bold" Margin="5"/>
             </StackPanel>
         </Grid>
 
